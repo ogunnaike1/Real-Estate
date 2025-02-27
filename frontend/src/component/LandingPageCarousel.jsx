@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react'
+import { motion, spring } from 'framer-motion';
 import Navbar from './Navbar'
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -19,11 +20,11 @@ const LandingPageCarousel = () => {
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
   return (
-    <div className='relative'>
-        <div className='relative z-50'>
+    <div className='relative font-sans'>
+        <div className='z-50 sticky top-0'>
         <Navbar />
         </div>
-        <div className='h-screen bg-red-500 text-8xl absolute top-0 w-full'>
+        <div className='h-screen text-8xl absolute top-0 w-full'>
                 <div className="relative h-[100%]  w-full">
             {/* Embla Carousel Container */}
             <div className="overflow-hidden h-[100%] w-full" ref={emblaRef}>
@@ -36,21 +37,29 @@ const LandingPageCarousel = () => {
                 </div>
             </div>
 
+            <motion.div initial={{y:150, opacity: 0 }} animate={{y:10, opacity: 1}} transition={{delay:1, type:"spring", stiffness:150}} className= ' absolute top-1/2 font-sans  w-[100%] flex flex-col gap-5 items-center'>
+                <h1 className='text-[60px] font-[700] text-white '>Three bedrooms apartment</h1>
+                <p className='text-[30px] font-[400] text-white '>spacious 2 and 3 bedroom student's apartment</p>
+                <button className='text-[16px] font-[700] rounded-3xl py-[12px] px-[30px]  border-3 border-white text-white '>Meet the Agent</button>
+            </motion.div>
+
             {/* Navigation Buttons */}
             <button
                 onClick={scrollPrev}
-                className="absolute top-1/2 left-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full"
+                className="absolute top-1/2 left-4 -translate-y-1/2 bg-opacity-50 text-white p-1 rounded-full"
             >
                 ◀
             </button>
             <button
                 onClick={scrollNext}
-                className="absolute top-1/2 right-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full"
+                className="absolute top-1/2 right-4 -translate-y-1/2 bg-opacity-50 text-white  rounded-full"
             >
                 ▶
             </button>
             </div>
         </div>
+
+        <div className='bg-red-500 h-[200vh]'></div>
     </div>
   )
 }

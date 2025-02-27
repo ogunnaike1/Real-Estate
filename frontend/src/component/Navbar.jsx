@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../assets/stonelogo.png'
+import { motion, useScroll } from "framer-motion";
 
 const Navbar = () => {
+    const { scrollY } = useScroll();
+  const [bg, setBg] = useState("bg-transparent");
+
+  useEffect(() => {
+    const handleScroll = (latest) => {
+      setBg(latest > 50 ? "bg-blue-500" : "bg-transparent");
+    };
+    const setScroll = scrollY.on("change", handleScroll);
+
+    return () => setScroll();
+  }, [scrollY]);
+
   return (
-    <div className=' flex bg-gray-400  font-sans font-[700] text-[16px] text-white h-[9vh]'>
-    <div className='flex justify-between w-[95%] m-auto items-center'>
+    <div className={`flex ${bg}   font-sans font-[700] text-[16px] text-white h-[9vh]`}>
+    <div className='flex justify-between w-[90%] m-auto items-center'>
         <div className=' flex gap-6 items-center'>
         <img className='h-[70px] w-[80px]' src={logo} alt="" />
             <a href="">Home</a>
