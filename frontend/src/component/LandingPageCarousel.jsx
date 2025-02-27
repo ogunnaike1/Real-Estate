@@ -37,7 +37,7 @@ const LandingPageCarousel = () => {
             <motion.div initial={{y:100, opacity: 0 }} animate={{y:10, opacity: 1}} transition={{delay:0.5, type:"spring", stiffness:150}} className= ' absolute top-1/2 font-sans  w-[100%] flex flex-col gap-5 items-center'>
                 <h1 className='text-[60px] font-[700] text-white '>Three bedrooms apartment</h1>
                 <p className='text-[30px] font-[400] text-white '>spacious 2 and 3 bedroom student's apartment</p>
-                <button className='text-[16px] font-[700] rounded-3xl py-[12px] px-[30px]  border-3 border-white text-white '>Meet the Agent</button>
+                <motion.button whileHover={{scale:1.1}} transition={{repeat:Infinity, type:"tween",duration: 0.5, stiffness:100, repeatType: "reverse"}} className='text-[16px] font-[700] rounded-3xl py-[12px] px-[30px]  border-3 border-white text-white '>Meet the Agent</motion.button>
             </motion.div>
             </div>
         </div>
