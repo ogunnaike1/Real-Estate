@@ -43,7 +43,7 @@ const LandingPageCarousel = () => {
             </div>
 
 
-        </div>
+        </div
     </div>
     <div className='bg-red-500 h-[200vh] relative top-[100vh]'>
          <div>
