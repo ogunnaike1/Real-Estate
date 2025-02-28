@@ -18,11 +18,12 @@ const LandingPageCarousel = () => {
 
 
   return (
-    <div className='relative font-sans'>
-        <div className='z-50 sticky top-0'>
+   <div className='relative'>
+      <div className='z-50 sticky top-0'>
         <Navbar />
-        </div>
-        <div className='h-screen text-8xl absolute top-0 w-full'>
+    </div>
+    <div className='absolute top-0 font-sans'>
+        <div className='h-screen text-8xl relative top-0 w-full'>
                 <div className="relative h-[100%]  w-full">
             {/* Embla Carousel Container */}
             <div className="overflow-hidden h-[100%] w-full" ref={emblaRef}>
@@ -40,10 +41,26 @@ const LandingPageCarousel = () => {
                 <motion.button whileHover={{scale:1.1}} transition={{repeat:Infinity, type:"tween",duration: 0.5, stiffness:100, repeatType: "reverse"}} className='text-[16px] font-[700] rounded-3xl py-[12px] px-[30px]  border-3 border-white text-white '>Meet the Agent</motion.button>
             </motion.div>
             </div>
-        </div>
 
-        <div className='bg-red-500 h-[200vh]'></div>
+
+        </div>
     </div>
+    <div className='bg-red-500 h-[200vh] relative top-[100vh]'>
+         <div>
+         <img src="https://media.designcafe.com/wp-content/uploads/2023/08/25160343/living-room-red-couch-with-recliner-lounge.jpg" alt="" />
+
+         </div>
+         <div>
+         <img src="https://atlanticfinefurniture.com/cdn/shop/articles/Coastal-Design-Ideas-The-Ultimate-Guide-Atlantic-Fine-Furniture-Inc-5958_1200x_a30491ea-7df0-41ae-ac10-0f92c5fbb040_800x.png?v=1731571602" alt="" />
+
+         </div>
+
+    </div>
+
+ 
+    </div>
+
+ 
   )
 }
 
