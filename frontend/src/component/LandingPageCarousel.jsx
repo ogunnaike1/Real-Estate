@@ -118,7 +118,7 @@ const LandingPageCarousel = () => {
 
 
     <div className='h-[100vh] flex justify-between ' >
-        <div className='w-[45%]'>
+    
 
         </div>
         <div className='w-[55%] h-[100%] bg-white'>
