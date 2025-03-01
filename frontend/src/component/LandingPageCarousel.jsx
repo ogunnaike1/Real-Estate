@@ -37,6 +37,19 @@ const childrenVariant = {
 
 }
 
+const LeftParentVariant = {
+    hidden:{
+        X:-150,
+        opacity:0
+    },
+    visible:{
+        x:10,
+        opacity:1,
+        transition:{duration:0.2, mass:0.2, damping:4, delay:0.1, type:"spring", stiffness:120, when:"beforeChildren", staggerChildren:0.2}
+    }
+
+}
+
 const LandingPageCarousel = () => {
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
@@ -122,7 +135,7 @@ const LandingPageCarousel = () => {
 
         </div>
         <div className='w-[55%] h-[100%] bg-white'>
-        <motion.div ref={ref} variants={parentVariant} initial="hidden"  animate={isInView ? "visible" : "hidden"}   className='flex mx-auto w-[70%] h-[100%] flex-col justify-around text-indigo-950 '>
+        <motion.div ref={ref} variants={leftParentVariant} initial="hidden"  animate={isInView ? "visible" : "hidden"}   className='flex mx-auto w-[70%] h-[100%] flex-col justify-around text-indigo-950 '>
                 <motion.p variants={childrenVariant} className='text-[40px] font-[600]'>
                 Spacious & Elegant 3-Bedroom Flat for Rent in Bodija
                 </motion.p>
