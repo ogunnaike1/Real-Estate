@@ -1,9 +1,14 @@
 import React, { useCallback } from 'react'
 import { motion, useInView  } from 'framer-motion';
+import logo from '../assets/stonelogo.png'
 import { useRef } from "react";
 import Navbar from './Navbar'
 import useEmblaCarousel from "embla-carousel-react";
+import { IoLocationOutline } from "react-icons/io5";
+import { FaWhatsapp } from "react-icons/fa6";
+import { FaAngleRight } from "react-icons/fa";
 import Autoplay from "embla-carousel-autoplay";
+import { CiMail } from "react-icons/ci";
 
 const images = [
   "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhdXRpZnVsJTIwaG91c2V8ZW58MHx8MHx8fDA%3D",
@@ -13,11 +18,11 @@ const images = [
 
 const parentVariant = {
     hidden:{
-        X:-150,
+        X:150,
         opacity:0
     },
     visible:{
-        x:10,
+        x:-10,
         opacity:1,
         transition:{duration:0.2, mass:0.2, damping:4, delay:0.1, type:"spring", stiffness:120, when:"beforeChildren", staggerChildren:0.2}
     }
@@ -25,7 +30,7 @@ const parentVariant = {
 }
 const childrenVariant = {
     hidden:{
-        x: -50, 
+        x: 50, 
         opacity:0
     },
     visible:{
@@ -37,7 +42,7 @@ const childrenVariant = {
 
 }
 
-const LeftParentVariant = {
+const leftParentVariant = {
     hidden:{
         X:-150,
         opacity:0
@@ -49,6 +54,18 @@ const LeftParentVariant = {
     }
 
 }
+const leftChildrenVariant = {
+    hidden:{
+        x: -50, 
+        opacity:0
+    },
+    visible:{
+        x:0,
+        opacity: 1,
+        transition: { duration: 0.2, type: "spring", stiffness: 180 }
+    }
+
+}
 
 const LandingPageCarousel = () => {
 
@@ -56,7 +73,10 @@ const LandingPageCarousel = () => {
     Autoplay({ delay: 3000 }), // Auto-play every 4 seconds
   ]);
   const ref = useRef(null);
+  const leftRef = useRef(null);
   const isInView = useInView(ref, { margin: "-100px" });
+  const isLeftInview = useInView(leftRef, { margin: "-100px" });
+
 
 
   return (
@@ -102,20 +122,20 @@ const LandingPageCarousel = () => {
     <div className='h-[100vh] flex justify-between '>  {/* find your perfect home container */}
         <div className='w-[60%] h-[100%] bg-white'>
             <motion.div ref={ref} variants={parentVariant} initial="hidden"  animate={isInView ? "visible" : "hidden"}   className='flex mx-auto w-[70%] h-[100%] flex-col justify-around text-indigo-950 '>
-                <motion.p variants={childrenVariant} className='text-[40px] font-[600]'>
+                <motion.p variants={leftChildrenVariant} className='text-[40px] font-[600]'>
                 Find Your Perfect Home
                 </motion.p>
-                <motion.p variants={childrenVariant} className='text-[20px] font-[400]'>
+                <motion.p variants={leftChildrenVariant} className='text-[20px] font-[400]'>
                 At Stonebridge, we simplify the rental process by connecting tenants with trusted real estate agents who have the perfect homes for them. Whether you're searching for a modern apartment, a family-friendly house, or a luxury rental, our platform ensures you find a space that truly feels like home—guided by professionals who know the market best.
                 </motion.p>
-                <motion.p variants={childrenVariant}  className='text-[20px] font-[400]'>
+                <motion.p variants={leftChildrenVariant}  className='text-[20px] font-[400]'>
                 Finding the right home is more than just browsing listings—it’s about working with the right agent who understands your needs. Our network of experienced real estate agents ensures you get access to properties that align with your lifestyle, location preferences, and budget.
                 </motion.p>
-                <motion.p variants={childrenVariant} className='text-[20px] font-[400]'>
+                <motion.p variants={leftChildrenVariant} className='text-[20px] font-[400]'>
                 Every property on our platform is vetted for accuracy and quality. Agents provide real-time availability and detailed insights, so tenants can rent with confidence, knowing they’re making the right choice. Why waste time searching alone? Let our trusted agents guide you to the perfect rental home, hassle-free.
                 </motion.p>
 
-                <motion.button variants={childrenVariant} whileHover={{scale:1.1}} transition={{repeat:Infinity, type:"tween",duration: 0.5, stiffness:100, repeatType: "reverse"}} className='text-[16px] font-[700] rounded-3xl py-[12px] px-[30px]  border-3 border-indigo-950  text-indigo-950 '>I am interest</motion.button>
+                <motion.button whileHover={{scale:1.1}} transition={{repeat:Infinity, type:"tween",duration: 0.5, stiffness:100, repeatType: "reverse"}} className='text-[16px] font-[700] rounded-3xl py-[12px] px-[30px]  border-3 border-indigo-950  text-indigo-950 '>I am interest</motion.button>
 
             </motion.div>
         </div>
@@ -128,14 +148,17 @@ const LandingPageCarousel = () => {
     <div className='h-[10vh] bg-white'>
 
     </div>
+    <div className='h-[10vh] bg-gray-300 '>
+
+    </div>
 
 
     <div className='h-[100vh] flex justify-between ' >
-        <div className='w-[45%]'>
+        <div className='w-[45%] bg-gray-300 -z-30'>
 
         </div>
-        <div className='w-[55%] h-[100%] bg-white'>
-        <motion.div ref={ref} variants={leftParentVariant} initial="hidden"  animate={isInView ? "visible" : "hidden"}   className='flex mx-auto w-[70%] h-[100%] flex-col justify-around text-indigo-950 '>
+        <div className='w-[55%] h-[100%] bg-gray-300'>
+        <motion.div ref={leftRef} variants={leftParentVariant} initial="hidden"  animate={ isLeftInview ? "visible" : "hidden"}   className='flex mx-auto w-[70%] h-[100%] flex-col justify-around text-indigo-950 '>
                 <motion.p variants={childrenVariant} className='text-[40px] font-[600]'>
                 Spacious & Elegant 3-Bedroom Flat for Rent in Bodija
                 </motion.p>
@@ -155,6 +178,67 @@ const LandingPageCarousel = () => {
 
         </div>
     </div>
+    <div className='h-[10vh] bg-gray-300 '>
+
+    </div>
+
+    <div className='flex  bg-white w-full py-[15vh]'>
+    <div className='w-[90vw]  mx-auto flex justify-between' >
+    <DivLearnMore header="Tailored Programs to Help You Find the Perfect Rental Home" text="If you're looking for a new place to rent, we offer a variety of tailored programs designed to connect you with reputable landlords and suitable properties. Our team is here to make the rental process easier, ensuring you find a home that meets your needs with minimal stress." ></DivLearnMore>
+    <motion.div      animate={{ y: [0, -40, 0] }} // Moves up and down
+            transition={{
+              repeat: Infinity, // Infinite loop
+              repeatType: "loop", // Smooth looping
+              duration: 5,
+              delay:1.5, // 1 second per cycle
+              ease: "easeInOut", // Smooth easing
+            }}
+            className='bg-indigo-950 text-white text-[18px] w-[28%] text-center py-[30px] px-[30px] flex flex-col gap-[15px]  shadow-gray-600 shadow-lg  '>
+            <p className='font-[700] '>Comprehensive Services to Match Tenants with the Right Rental Properties</p>
+            <p className='font-[400] text-[16px]'>hether you're a tenant searching for a home or a landlord looking for reliable renters, our expert services help facilitate the perfect match. From property listings to lease agreements, we streamline the entire process, making renting simple and hassle-free for everyone involved.</p>
+            <button>Learn more</button>
+            </motion.div>
+    <DivLearnMore header="Innovative Solutions to Simplify the Rental Process for Both Tenants and Landlords" text="Finding the right rental home or tenant can be a challenge, but our specialized solutions are designed to make the process as smooth as possible. We provide expert guidance, property recommendations, and seamless communication between landlords and tenants to ensure a stress-free renting experience." ></DivLearnMore>
+    </div>
+    </div>
+
+    <div>
+        <div className=' bg-gray-300'> 
+        <img className='h-[20vh]' src={logo} alt="" />
+        </div>
+
+        <div className='h-[60vh] bg-gray-300 flex justify-between text-[16px]'>
+         
+        
+            <div className='flex gap-[5px] flex-col '>
+                <a className='flex items-center gap-[2px]' href=""><FaAngleRight /> <span>Home</span></a>
+                <a className='flex items-center gap-[2px]' href=""><FaAngleRight /> <span>About Us</span> </a>
+                <a className='flex items-center gap-[2px]' href=""><FaAngleRight /> <span>Listings</span> </a>
+                <a className='flex items-center gap-[2px]' href=""><FaAngleRight /> <span>Gallery</span> </a>
+            </div>
+
+            <div>
+            <a className='flex items-center gap-[2px]' href=""><FaAngleRight /> <span>Contact Us</span> </a>
+            <a className='flex items-center gap-[2px]' href=""><FaAngleRight /> <span>Privacy Policy</span> </a>
+            <a className='flex items-center gap-[2px]' href=""><FaAngleRight /> <span>Terms & Conditions</span> </a>
+            
+            </div>
+
+            <div>
+                
+                <a className='flex items-center gap-[2px]' href=""><IoLocationOutline /> <span>N0 15 okeolugbade street, igbeba, ijebu-ode</span></a>
+                <a className='flex items-center gap-[2px]' href=""><FaWhatsapp /> <span>+234-813-985-65</span></a>
+                <a className='flex items-center gap-[2px]' href=""><CiMail /> <span>Stonebridge@gmail.com</span></a>
+          
+                
+             </div>
+                <div className='flex h-[20vh] bg-amber-300 flex-col gap-[15px]'>
+                <input className='w-[20vw] h-[7vh]  bg-white' type="text"/>
+                <button className='bg-indigo-950 text-white w-[6vw] h-[7vh]'>Sign up</button>
+                </div>
+
+        </div>
+    </div>
 
     </div>
 
@@ -163,3 +247,22 @@ const LandingPageCarousel = () => {
 }
 
 export default LandingPageCarousel
+
+export const DivLearnMore = ({header, text}) =>{
+    return(
+            <motion.div   
+            animate={{ y: [0, -40, 0] }} // Moves up and down
+            transition={{
+              repeat: Infinity, // Infinite loop
+              repeatType: "loop", // Smooth looping
+              duration: 5, // 1 second per cycle
+              ease: "easeInOut", // Smooth easing
+            }}
+            className='bg-indigo-950 text-white text-[18px] w-[28%] text-center py-[30px] px-[30px] flex flex-col gap-[15px]  shadow-gray-600 shadow-lg '>
+            <p className='font-[700] '>{header}</p>
+            <p className='font-[400] text-[16px]'>{text}</p>
+            <button>Learn more</button>
+            </motion.div>
+
+    )
+}
