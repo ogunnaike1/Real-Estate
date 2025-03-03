@@ -212,7 +212,7 @@ const LandingPageCarousel = () => {
         
             <div className='flex gap-[5px] flex-col '>
                 <a className='flex items-center gap-[2px]' href=""><FaAngleRight /> <span>Home</span></a>
-                <a className='flex items-center gap-[2px]' href=""><FaAngleRight /> <span>About Us</span> </a>
+          
                 <a className='flex items-center gap-[2px]' href=""><FaAngleRight /> <span>Listings</span> </a>
                 <a className='flex items-center gap-[2px]' href=""><FaAngleRight /> <span>Gallery</span> </a>
             </div>
