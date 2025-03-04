@@ -209,9 +209,7 @@ const LandingPageCarousel = () => {
                 <img className='h-[20vh]' src={logo} alt="" />
                 </div>
 
-           
-                
-                
+                <div className='h-[40vh] bg-gray-300 flex justify-between text-[14px] ml-[2]'>
                     <div className='flex gap-[5px] flex-col '>
                         <a className='flex items-center gap-[2px]' href=""><FaAngleRight /> <span>Home</span></a>
                         <a className='flex items-center gap-[2px]' href=""><FaAngleRight /> <span>About Us</span> </a>
