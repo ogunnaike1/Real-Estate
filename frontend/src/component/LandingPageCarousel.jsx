@@ -206,7 +206,7 @@ const LandingPageCarousel = () => {
         <div  className='bg-gray-300 pb-[3vh]'>
             <div className=' flex mx-auto w-[80%] flex-col'>
                 <div className=''> 
-          
+                <img className='h-[20vh]' src={logo} alt="" />
                 </div>
 
                 <div className='h-[40vh] bg-gray-300 flex justify-between text-[14px] ml-[2]'>
