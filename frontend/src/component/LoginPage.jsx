@@ -9,7 +9,7 @@ const LoginPage = () => {
      <div className='flex w-full border-b-[1px] border-slate-200 h-[8vh]' >
        <div className='flex items-center justify-between h-[100%]] w-[95%]  mx-auto'>
         <h1 className='text-[18px] font-[500]'>Welcome to Stonebridge</h1>
-        <div className='flex text-[25px] font-[700]'><IoClose /></div>
+       
      </div>
      </div>
         <div className='flex flex-col w-[80%] mx-auto h-[30vh] justify-between mt-[4vh]'>
