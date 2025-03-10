@@ -7,8 +7,7 @@ const LoginPage = () => {
 
     <div className='bg-white h-[80vh] w-[27vw] flex flex-col rounded-2xl'>
      <div className='flex w-full border-b-[1px] border-slate-200 h-[8vh]' >
-       <div className='flex items-center justify-between h-[100%]] w-[95%]  mx-auto'>
-        <h1 className='text-[18px] font-[500]'>Welcome to Stonebridge</h1>
+
    
      </div>
      </div>
