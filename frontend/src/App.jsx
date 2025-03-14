@@ -12,7 +12,7 @@ function App() {
 
     <Routes>
 
-    <Route path="/landing-page" element= {<LandingPageCarousel/>} />
+    <Route path="/" element= {<LandingPageCarousel/>} />
     <Route path="/login" element={<LoginPage />} />
   </Routes>
 

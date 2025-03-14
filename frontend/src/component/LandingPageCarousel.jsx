@@ -1,8 +1,9 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
 import { motion, useInView  } from 'framer-motion';
 import logo from '../assets/stonelogo.png'
 import { useRef } from "react";
 import Navbar from './Navbar'
+import LoginPage from './LoginPage';
 import useEmblaCarousel from "embla-carousel-react";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaWhatsapp } from "react-icons/fa6";
@@ -15,6 +16,7 @@ const images = [
   "https://media.vrbo.com/lodging/35000000/34330000/34327800/34327788/529f0747.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill",
   "https://static.vecteezy.com/system/resources/previews/050/785/760/non_2x/beautiful-luxury-house-with-stone-facade-and-landscaped-yard-lighting-up-at-dusk-photo.jpg",
 ];
+
 
 const parentVariant = {
     hidden:{
@@ -68,7 +70,7 @@ const leftChildrenVariant = {
 }
 
 const LandingPageCarousel = () => {
-
+    const [showLogin, setShowLogin] = useState(false)
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 3000 }), // Auto-play every 4 seconds
   ]);
@@ -80,9 +82,10 @@ const LandingPageCarousel = () => {
 
 
   return (
+    <>
    <div className='relative'>
       <div className='z-50 sticky top-0'>
-        <Navbar />
+        <Navbar setShowLogin ={()=> setShowLogin(true)} />
     </div>
     <div className='absolute top-0 font-sans'>
         <div className='h-screen text-8xl relative top-0 w-full'>
@@ -249,7 +252,15 @@ const LandingPageCarousel = () => {
 
     </div>
 
- 
+    {showLogin &&
+        <div  className='fixed top-0 left-0 w-full h-full z-[100] bg-black/50'>
+            <LoginPage closeShowLogin={()=> setShowLogin(false)} />
+        </div>
+    
+    }
+
+    </>
+
   )
 }
 
