@@ -45,7 +45,7 @@ export default Navbar
 export const DivButton = ({text, onClick})=>{
     const { scrollY } = useScroll();
     const [buttonBg, setButtonBG] = useState("bg-transparent");
- 
+    const [buttonBorderColor, setButtonBorderColor] = useState("border-white");
 
   useEffect(() => {
     const handleScroll = (latest) => {
