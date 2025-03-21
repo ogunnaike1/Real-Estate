@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import logo from '../assets/stonelogo.png'
 import { motion, useScroll } from "framer-motion";
 
-const Navbar = ({setShowLogin}) => {
+const Navbar = ({setShowLogin, setShowSignUp}) => {
     const { scrollY } = useScroll();
   const [bg, setBg] = useState("bg-transparent");
   const [textColor, setTextColor] = useState("text-white");
@@ -32,7 +32,7 @@ const Navbar = ({setShowLogin}) => {
             <a className= {`${ bg === "bg-white" ? "hover:text-white hover:bg-indigo-950" : "hover:text-indigo-950 hover:bg-white"} px-[25px] py-[10px] rounded-3xl`}  href="">Gallery</a>
         </div>
         <div className=' flex items-center gap-6'>
-        <DivButton  text='Sign Up'/>
+        <DivButton onClick={setShowSignUp} text='Sign Up'/>
         <DivButton onClick={setShowLogin} text='Log In'/>
         </div>
         </div>    

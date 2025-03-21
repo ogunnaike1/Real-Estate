@@ -4,14 +4,14 @@ import { CiMail,  CiUser, CiLock } from "react-icons/ci";
 import { motion} from 'framer-motion';
 
 
-const LoginPage = ({closeShowLogin}) => {
+const SignUp = ({closeShowSignUp}) => {
   return (
     <div className='w-full bg-white-500/20 h-screen flex justify-center items-center '>
     <motion.div  initial={{ y: -150 }}  animate={{ y: 0 }} transition={{duration:0.2}} className='bg-white h-[80vh] w-[27vw] flex flex-col rounded-2xl '>
      <div className='flex w-full border-b-[1px] border-slate-200 h-[8vh]' >
        <div className='flex items-center justify-between h-[100%]] w-[95%]  mx-auto'>
         <h1 className='text-[18px] text-indigo-950 font-[500]'>Welcome to Stonebridge</h1>
-        <button onClick={closeShowLogin} className='text-[20px] font-[700]'><IoClose/></button>
+        <button onClick={closeShowSignUp} className='text-[20px]'>
      </div>
      </div>
         <div className='flex flex-col w-[80%] mx-auto h-[45vh] justify-between mt-[4vh]'>
@@ -55,4 +55,4 @@ const LoginPage = ({closeShowLogin}) => {
   )
 }
 
-export default LoginPage
+export default SignUp

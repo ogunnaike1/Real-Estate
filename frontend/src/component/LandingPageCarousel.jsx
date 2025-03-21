@@ -10,6 +10,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa";
 import Autoplay from "embla-carousel-autoplay";
 import { CiMail } from "react-icons/ci";
+import SignUp from './SignUp';
 
 const images = [
   "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhdXRpZnVsJTIwaG91c2V8ZW58MHx8MHx8fDA%3D",
@@ -71,6 +72,7 @@ const leftChildrenVariant = {
 
 const LandingPageCarousel = () => {
     const [showLogin, setShowLogin] = useState(false)
+    const [showSignUp, setShowSignUp] = useState(false)
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 3000 }), // Auto-play every 4 seconds
   ]);
@@ -85,7 +87,7 @@ const LandingPageCarousel = () => {
     <>
    <div className='relative'>
       <div className='z-50 sticky top-0'>
-        <Navbar setShowLogin ={()=> setShowLogin(true)} />
+        <Navbar setShowLogin ={()=> setShowLogin(true)} setShowSignUp={()=>setShowSignUp(true)} />
     </div>
     <div className='absolute top-0 font-sans'>
         <div className='h-screen text-8xl relative top-0 w-full'>
@@ -256,7 +258,11 @@ const LandingPageCarousel = () => {
         <div  className='fixed top-0 left-0 w-full h-full z-[100] bg-black/50'>
             <LoginPage closeShowLogin={()=> setShowLogin(false)} />
         </div>
-    
+    }
+    {showSignUp &&
+        <div  className='fixed top-0 left-0 w-full h-full z-[100] bg-black/50'>
+            <SignUp closeShowSignUp={()=> setShowSignUp(false)} />
+        </div>
     }
 
     </>
