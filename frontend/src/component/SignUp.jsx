@@ -11,7 +11,7 @@ const SignUp = ({closeShowSignUp}) => {
      <div className='flex w-full border-b-[1px] border-slate-200 h-[8vh]' >
        <div className='flex items-center justify-between h-[100%]] w-[95%]  mx-auto'>
         <h1 className='text-[18px] text-indigo-950 font-[500]'>Welcome to Stonebridge</h1>
-        <button onClick={closeShowSignUp} className='text-[20px]'><IoClose/></button>
+   
      </div>
      </div>
         <div className='flex flex-col w-[80%] mx-auto h-[45vh] justify-between mt-[4vh]'>
