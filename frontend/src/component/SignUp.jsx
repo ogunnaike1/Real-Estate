@@ -9,8 +9,7 @@ const SignUp = ({closeShowSignUp}) => {
     <div className='w-full bg-white-500/20 h-screen flex justify-center items-center '>
     <motion.div  initial={{ y: -150 }}  animate={{ y: 0 }} transition={{duration:0.2}} className='bg-white h-[80vh] w-[27vw] flex flex-col rounded-2xl '>
      <div className='flex w-full border-b-[1px] border-slate-200 h-[8vh]' >
-       <div className='flex items-center justify-between h-[100%]] w-[95%]  mx-auto'>
-        <h1 className='text-[18px] text-indigo-950 font-[500]'>Welcome to Stonebridge</h1>
+      
         <button onClick={closeShowSignUp} className='text-[20px]'><IoClose/></button>
      </div>
      </div>
