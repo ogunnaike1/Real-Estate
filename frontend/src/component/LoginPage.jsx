@@ -21,7 +21,7 @@ const LoginPage = ({closeShowLogin}) => {
          <input className=' h-[90%] w-[88%] outline-0'  type="text" name="" id="" placeholder='Username or Email' />
          </div>
          <div className='group border-[1px] border-slate-300 h-[6vh] focus-within:border-indigo-950 rounded-[5px] flex justify-between items-center'>
-         <span className='w-[12%] flex justify-center text-[20px] group-focus-within:text-indigo-950'> <CiMail /></span>
+         <span className='w-[12%] flex justify-center text-[20px] group-focus-within:text-indigo-950'> <CiLock /></span>
          <input className=' h-[90%] w-[88%] outline-0'  type="text" name="" id="" placeholder='Password' />
          </div>
         
