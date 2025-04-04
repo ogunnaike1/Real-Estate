@@ -58,6 +58,6 @@ export const DivButton = ({text, onClick})=>{
     return () => setScroll();
   }, [scrollY]);
     return(
-        <button onClick={onClick} className={`border-3 ${buttonBorderColor} ${buttonBg} rounded-3xl py-[10px] px-[30px] text-white `}>{text}</button>
+        <button onClick={onClick} className={` ${ buttonBg === "bg-transparent" ? "hover:text-indigo-950 hover:bg-white" : "hover:text-indigo-950 hover:bg-white"} border-3 ${buttonBorderColor} ${buttonBg} rounded-3xl py-[10px] px-[30px] text-white `}>{text}</button>
     )
 }

@@ -18,22 +18,22 @@ const SignUp = ({closeShowSignUp}) => {
 
          <div className='group border-[1px] border-slate-300 h-[6vh] focus-within:border-indigo-950 rounded-[5px] flex justify-between items-center'>
          <span className='w-[12%] flex justify-center text-[20px] group-focus-within:text-indigo-950'>  <CiUser /></span>
-         <input className=' h-[90%] w-[88%] outline-0'  type="text" name="" id="" />
+         <input className=' h-[90%] w-[88%] outline-0'  type="text" name="" id="" placeholder='Username' />
          </div>
          <div className='group border-[1px] border-slate-300 h-[6vh] focus-within:border-indigo-950 rounded-[5px] flex justify-between items-center'>
          <span className='w-[12%] flex justify-center text-[20px] group-focus-within:text-indigo-950'> <CiMail /></span>
-         <input className=' h-[90%] w-[88%] outline-0'  type="text" name="" id="" />
+         <input className=' h-[90%] w-[88%] outline-0'  type="text" name="" id="" placeholder='Email'/>
          </div>
          <div className='group border-[1px] border-slate-300 h-[6vh] focus-within:border-indigo-950 rounded-[5px] flex justify-between items-center'>
          <span className='w-[12%] flex justify-center text-[20px] group-focus-within:text-indigo-950'> <CiLock /></span>
-         <input className=' h-[90%] w-[88%] outline-0'  type="text" name="" id="" />
+         <input className=' h-[90%] w-[88%] outline-0'  type="text" name="" id="" placeholder='Password' />
          </div>
          <div className='group border-[1px] border-slate-300 h-[6vh] focus-within:border-indigo-950 rounded-[5px] flex justify-between items-center'>
          <span className='w-[12%] flex justify-center text-[20px] group-focus-within:text-indigo-950'> <CiLock /></span>
-         <input className=' h-[90%] w-[88%] outline-0'  type="text" name="" id="" />
+         <input className=' h-[90%] w-[88%] outline-0'  type="text" name="" id="" placeholder='Confirm Password'/>
          </div>
         
-            <button className='border-[1px] bg-indigo-950 text-white border-slate-300 h-[6vh] rounded-[5px]'>CONTINUE</button>
+            <button className='border-[1px] bg-indigo-950  hover:bg-indigo-900 text-white border-slate-300 h-[6vh] rounded-[5px]'>CONTINUE</button>
             <div className='flex justify-center gap-[7px]'>
               <p className='text-gray-800'>Already have an account?</p>
               <a className='text-blue-500' href="">Login</a>
