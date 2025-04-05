@@ -13,7 +13,8 @@ function App() {
     <Routes>
 
     <Route path="/" element= {<LandingPageCarousel/>} />
- 
+    <Route path="/login" element={<LoginPage />} />
+  </Routes>
 
   )
 }
