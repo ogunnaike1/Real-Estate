@@ -1,16 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IoClose } from "react-icons/io5";
 import { CiMail,  CiUser, CiLock } from "react-icons/ci";
 import { motion} from 'framer-motion';
 
 
 const SignUp = ({closeShowSignUp}) => {
+
+const [formDetails, setFormDetails] = useState({
+    username:"",
+    email:"",
+    password
+})
+    const hanndleSignUp = ()=>{
+
+    }
   return (
     <div className='w-full bg-white-500/20 h-screen flex justify-center items-center '>
     <motion.div  initial={{ y: -150 }}  animate={{ y: 0 }} transition={{duration:0.2}} className='bg-white h-[80vh] w-[27vw] flex flex-col rounded-2xl '>
      <div className='flex w-full border-b-[1px] border-slate-200 h-[8vh]' >
        <div className='flex items-center justify-between h-[100%]] w-[95%]  mx-auto'>
-        <h1 className='text-[18px] text-indigo-950 font-[500]'>Welcome to Stonebridge</h1>
+   
         <button onClick={closeShowSignUp} className='text-[20px]'><IoClose/></button>
      </div>
      </div>
@@ -33,7 +42,7 @@ const SignUp = ({closeShowSignUp}) => {
          <input className=' h-[90%] w-[88%] outline-0'  type="text" name="" id="" placeholder='Confirm Password'/>
          </div>
         
-            <button className='border-[1px] bg-indigo-950  hover:bg-indigo-900 text-white border-slate-300 h-[6vh] rounded-[5px]'>CONTINUE</button>
+            <button className='border-[1px] bg-indigo-950  hover:bg-indigo-900 text-white border-slate-300 h-[6vh] rounded-[5px]'>Sign Up</button>
             <div className='flex justify-center gap-[7px]'>
               <p className='text-gray-800'>Already have an account?</p>
               <a className='text-blue-500' href="">Login</a>
