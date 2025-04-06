@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import logo from '../assets/stonelogo.png'
 import { motion, useScroll } from "framer-motion";
+import { IoIosSearch } from "react-icons/io";
+import { CiBellOn } from "react-icons/ci";
 
 const Navbar = ({setShowLogin, setShowSignUp}) => {
     const { scrollY } = useScroll();
   const [bg, setBg] = useState("bg-transparent");
   const [textColor, setTextColor] = useState("text-white");
+  const [borderColor, setBorderColor] = useState("border-white");
+  const [isAuthentication, setIsAuthentication] = useState(false);
 
 
   useEffect(() => {
     const handleScroll = (latest) => {
       setBg(latest > 50 ? "bg-white" : "bg-transparent");
       setTextColor(latest > 50 ? "text-indigo-950" : "text-white");
+      setBorderColor(latest > 50 ? "border-indigo-950" : "border-white" )
     };
     const setScroll = scrollY.on("change", handleScroll);
 
@@ -32,8 +37,29 @@ const Navbar = ({setShowLogin, setShowSignUp}) => {
             <a className= {`${ bg === "bg-white" ? "hover:text-white hover:bg-indigo-950" : "hover:text-indigo-950 hover:bg-white"} px-[25px] py-[10px] rounded-3xl`}  href="">Gallery</a>
         </div>
         <div className=' flex items-center gap-6'>
-        <DivButton onClick={setShowSignUp} text='Sign Up'/>
-        <DivButton onClick={setShowLogin} text='Log In'/>
+        { isAuthentication ?
+        (
+          <>
+          <DivButton onClick={setShowSignUp} text='Sign Up'/>
+          <DivButton onClick={setShowLogin} text='Log In'/>
+          </>
+        )
+          :
+          (
+            <>
+        <div className={ `flex items-center  h-[9vh] gap-[15px] ${textColor}` }>
+            <button className={`h-[40px] w-[40px] text-2xl flex items-center justify-center rounded-[50%] border-[1px]  ${borderColor} `}><IoIosSearch /></button>
+            <button className='h-[100%] flex items-center'> <img className={`h-[40px] w-[40px] border-[1px] ${borderColor} rounded-[50%]`} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VkrGsURfsUriJFM6bAD51TjXzrcEYo2RAQ&s" alt="" /></button>
+            <button className={`flex items-center text-2xl gap-[6px]  border-[1px] ${borderColor} px-[14px] py-[8px] rounded-3xl `}>
+              <span><CiBellOn /></span>
+              <span className='text-[14px]'>0</span>
+            </button>
+          </div>
+          </>
+
+          )
+        }
+      
         </div>
         </div>    
     </div>
