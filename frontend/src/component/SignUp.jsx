@@ -6,14 +6,7 @@ import { motion} from 'framer-motion';
 
 const SignUp = ({closeShowSignUp}) => {
 
-const [formDetails, setFormDetails] = useState({
-    username:"",
-    email:"",
-    password
-})
-    const hanndleSignUp = ()=>{
 
-    }
   return (
     <div className='w-full bg-white-500/20 h-screen flex justify-center items-center '>
     <motion.div  initial={{ y: -150 }}  animate={{ y: 0 }} transition={{duration:0.2}} className='bg-white h-[80vh] w-[27vw] flex flex-col rounded-2xl '>
