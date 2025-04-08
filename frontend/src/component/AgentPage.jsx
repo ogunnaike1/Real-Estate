@@ -7,7 +7,7 @@ const AgentPage = () => {
       <img className='h-[100%] w-[100%]' src="https://en.idei.club/uploads/posts/2023-12/1703105533_en-idei-club-p-beautiful-house-inside-and-outside-dizain-16.jpg" alt="" />
       </div>
 
-      <div className=' absolute top-[50px] h-[2000px] bg-amber-500 '>
+   
 
 
       </div>
