@@ -85,10 +85,6 @@ const LandingPageCarousel = () => {
 
   return (
     <>
-   <div className='relative'>
-      <div className='z-50 sticky top-0'>
-        <Navbar setShowLogin ={()=> setShowLogin(true)} setShowSignUp={()=>setShowSignUp(true)} />
-    </div>
     <div className='absolute top-0 font-sans'>
         <div className='h-screen text-8xl relative top-0 w-full'>
                 <div className="relative h-[100%]  w-full">
@@ -248,22 +244,8 @@ const LandingPageCarousel = () => {
             </div>
             <div className='text-[14px] text-center'>© 2025 All Rights Reserved </div>
         </div>
-        
        
     </div>
-
-    </div>
-
-    {showLogin &&
-        <div  className='fixed top-0 left-0 w-full h-full z-[100] bg-black/50'>
-            <LoginPage closeShowLogin={()=> setShowLogin(false)} />
-        </div>
-    }
-    {showSignUp &&
-        <div  className='fixed top-0 left-0 w-full h-full z-[100] bg-black/50'>
-            <SignUp closeShowSignUp={()=> setShowSignUp(false)} />
-        </div>
-    }
 
     </>
 

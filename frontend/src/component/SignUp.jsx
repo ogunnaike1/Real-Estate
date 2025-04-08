@@ -6,7 +6,14 @@ import { motion} from 'framer-motion';
 
 const SignUp = ({closeShowSignUp}) => {
 
+// const [formDetails, setFormDetails] = useState({
+//     username:"",
+//     email:"",
+//     password
+// })
+//     const hanndleSignUp = ()=>{
 
+//     }
   return (
     <div className='w-full bg-white-500/20 h-screen flex justify-center items-center '>
     <motion.div  initial={{ y: -150 }}  animate={{ y: 0 }} transition={{duration:0.2}} className='bg-white h-[80vh] w-[27vw] flex flex-col rounded-2xl '>
@@ -20,7 +27,7 @@ const SignUp = ({closeShowSignUp}) => {
 
          <div className='group border-[1px] border-slate-300 h-[6vh] focus-within:border-indigo-950 rounded-[5px] flex justify-between items-center'>
          <span className='w-[12%] flex justify-center text-[20px] group-focus-within:text-indigo-950'>  <CiUser /></span>
-         <input className=' h-[90%] w-[88%] outline-0'  type="text" name="" id="" placeholder='Username' />
+         <input className=' h-[90%] w-[88%] outline-0'  type="text" onC name="" id="" placeholder='Username' />
          </div>
          <div className='group border-[1px] border-slate-300 h-[6vh] focus-within:border-indigo-950 rounded-[5px] flex justify-between items-center'>
          <span className='w-[12%] flex justify-center text-[20px] group-focus-within:text-indigo-950'> <CiMail /></span>

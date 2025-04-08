@@ -9,7 +9,7 @@ const Navbar = ({setShowLogin, setShowSignUp}) => {
   const [bg, setBg] = useState("bg-transparent");
   const [textColor, setTextColor] = useState("text-white");
   const [borderColor, setBorderColor] = useState("border-white");
-  const [isAuthentication, setIsAuthentication] = useState(false);
+  const [isAuthentication, setIsAuthentication] = useState(true);
 
 
   useEffect(() => {
