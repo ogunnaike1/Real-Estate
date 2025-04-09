@@ -13,7 +13,7 @@ const AgentPage = () => {
 
           <div className='h-[5000px] bg-white relative mt-[-50vh]'>
 
-            <div className='w-[80%] mx-auto h-[100vh] bg-white'>
+         
               <div className=''>
                 <div className='flex gap-[20px] h-[15vh] border-b-[1px]  border-slate-200'>
                   <div className='h-[90px] w-[90px] mt-[-25px]'>
