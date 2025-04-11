@@ -60,7 +60,8 @@ const AgentPage = () => {
                        </div>
 
                        <div className='flex flex-col'>
-                 
+                          <span>Stonebridge</span>
+                          <span>Available</span>
                        </div>
                      </div>
 
