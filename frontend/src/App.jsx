@@ -6,6 +6,7 @@ import LoginPage from './component/LoginPage';
 import SignUp from './component/SignUp';
 import Navbar from './component/Navbar';
 import AgentPage from './component/AgentPage';
+import Hover from './component/Hover';
 
 
 const App= ()=> {
