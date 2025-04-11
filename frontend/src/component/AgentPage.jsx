@@ -56,11 +56,12 @@ const AgentPage = () => {
                        <div className='h-[40px] w-[40px]'>
 
                          <img className='h-[100%] w-[100%] rounded-[50%]' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VkrGsURfsUriJFM6bAD51TjXzrcEYo2RAQ&s" alt="" />
-
+                         
                        </div>
 
                        <div className='flex flex-col'>
-                        
+                          <span>Stonebridge</span>
+                          <span>Available</span>
                        </div>
                      </div>
 
