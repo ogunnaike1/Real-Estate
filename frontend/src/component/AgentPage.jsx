@@ -50,20 +50,25 @@ const AgentPage = () => {
                     <div className='h-[45%] bg-amber-100'>
                       <img className='h-[100%] w-[100%]' src="https://www.bhg.com/thmb/TD9qUnFen4PBLDuB2hn9yhGXPv8=/1866x0/filters:no_upscale():strip_icc()/white-house-a-frame-section-c0a4a3b3-e722202f114e4aeea4370af6dbb4312b.jpg" alt="" />
                     </div>
-                    <div>
-                     <div className='h-[20vh] w-[55%] bg-amber-200 flex justify-between'>
+                    <div className='flex justify-between'>
+                      <div className='h-[6vh] w-[55%] bg-amber-200 flex justify-between'>
 
-                       <div className='h-[40px] w-[40px]'>
+                        <div className='h-[40px] w-[40px]'>
 
-                         <img className='h-[100%] w-[100%] rounded-[50%]' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VkrGsURfsUriJFM6bAD51TjXzrcEYo2RAQ&s" alt="" />
-                         
-                       </div>
+                          <img className='h-[100%] w-[100%] rounded-[50%]' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VkrGsURfsUriJFM6bAD51TjXzrcEYo2RAQ&s" alt="" />
+                          
+                        </div>
 
-                       <div className='flex flex-col'>
-                          <span>Stonebridge</span>
-                          <span>Available</span>
-                       </div>
-                     </div>
+                        <div className='flex flex-col'>
+                            <span className='text-[14px] text-slate-400'>Stonebridge</span>
+                            <span className='text-green-200 text-[14px]'>Available</span>
+                        </div>
+                      </div>
+
+                      <div className='flex items-center text-[18px] font-[600]'>
+                      <span className='text-indigo-900'>#90000</span>
+
+                      </div>
 
                     </div>
 
