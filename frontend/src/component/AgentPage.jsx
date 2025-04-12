@@ -66,7 +66,7 @@ const AgentPage = () => {
                       </div>
 
                       <div className='flex items-center text-[18px] font-[600]'>
-                      <span className='text-indigo-900'>#90000</span>
+            
 
                       </div>
 
