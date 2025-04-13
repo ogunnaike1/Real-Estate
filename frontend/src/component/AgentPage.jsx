@@ -90,7 +90,7 @@ const AgentPage = () => {
 
                   </div>
 
-                  <div className='mt-[5vh] border-t-[1px] border-gray-400 max-h-[20vh] overflow-y-auto'>
+                  <div className='mt-[5vh] border-t-[1px] border-gray-400 max-h-[40vh] overflow-y-auto'>
                     <h3 className='ml-[10px] text-[16px] font-[700] mt-[10px] mb-[5px]'>Property Type</h3>
                     <div className='flex text-[16px] font-[700] w-[90%] mx-auto items-center justify-between h-[6vh] border-b-[1px] border-gray-400 '>
                       <div className='flex items-center gap-[10px]'><span className='text-indigo-900'><IoChatbubbles /></span> <span className='text-slate-500'>Bungalow</span></div>
