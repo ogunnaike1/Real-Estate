@@ -51,7 +51,7 @@ const AgentPage = () => {
 
               <div className='w-full  flex justify-between mt-[5vh]'>
 
-                <div className=' flex justify-around gap-7 flex-wrap   w-[69%] h-[100%] '>
+                <div className='scrollable-div flex justify-around gap-7 flex-wrap overflow-y-auto   w-[69%] max-h-[100vh] '>
                 <DivExploreProperty/>
                 <DivExploreProperty/>
                 <DivExploreProperty/>
@@ -90,16 +90,17 @@ const AgentPage = () => {
 
                   </div>
 
-                  <div className='mt-[5vh] border-t-[1px] border-gray-400 max-h-[40vh] overflow-y-auto'>
+                  <div className='  mt-[5vh] border-t-[1px] border-gray-400  '>
                     <h3 className='ml-[10px] text-[16px] font-[700] mt-[10px] mb-[5px]'>Property Type</h3>
+                    <div className='scrollable-div overflow-y-auto max-h-[25vh]'>
                     <div className='flex text-[16px] font-[700] w-[90%] mx-auto items-center justify-between h-[6vh] border-b-[1px] border-gray-400 '>
                       <div className='flex items-center gap-[10px]'><span className='text-indigo-900'><IoChatbubbles /></span> <span className='text-slate-500'>Bungalow</span></div>
-                      <div>2 days</div>
+                      <div>Available</div>
                     </div>
 
                     <div className='flex text-[16px] font-[700] w-[90%] mx-auto items-center justify-between h-[6vh] border-b-[1px] border-gray-400 '>
                       <div className='flex items-center gap-[10px]'><span className='text-indigo-900'><IoChatbubbles /></span> <span className='text-slate-500'>Two bedroom flat</span></div>
-                      <div>2 days</div>
+                      <div>Available</div>
                     </div>
                     <div className='flex text-[16px] font-[700] w-[90%] mx-auto items-center justify-between h-[6vh] border-b-[1px] border-gray-400 '>
                       <div className='flex items-center gap-[10px]'><span className='text-indigo-900'><IoChatbubbles /></span> <span className='text-slate-500'>Three bedroom flatt</span></div>
@@ -114,6 +115,7 @@ const AgentPage = () => {
                     <div className='flex text-[16px] font-[700] w-[90%] mx-auto items-center justify-between h-[6vh] border-b-[1px] border-gray-400 '>
                       <div className='flex items-center gap-[10px]'><span className='text-indigo-900'><IoChatbubbles /></span> <span className='text-slate-500'>Warehouse</span></div>
                       <div>Available</div>
+                    </div>
                     </div>
                   </div>
                
