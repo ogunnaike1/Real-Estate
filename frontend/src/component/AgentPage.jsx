@@ -85,7 +85,7 @@ const AgentPage = () => {
 
                     <div className='flex text-[16px] font-[700] w-[90%] mx-auto items-center justify-between h-[6vh] border-b-[1px] border-gray-400 '>
                       <div className='flex items-center gap-[10px]'><span className='text-green-500'><BsFillClockFill /></span> <span className='text-slate-500'>Last Seen</span></div>
-                      <div>Today</div>
+                    
                     </div>
 
                   </div>
