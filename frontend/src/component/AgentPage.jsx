@@ -7,6 +7,8 @@ import { IoChatbubbles } from "react-icons/io5";
 import { MdRecentActors } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
 import { BsFillClockFill } from "react-icons/bs";
+import { FaHouseUser } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 
 const AgentPage = () => {
   return (
@@ -19,7 +21,7 @@ const AgentPage = () => {
            
           </div>
 
-          <div className='h-[5000px] bg-white relative mt-[-50vh]'>
+          <div className='mb-[20vh] bg-white relative mt-[-50vh]'>
           
             <div className='w-[80%] mx-auto h-[100vh] bg-white'>
               <div className='flex border-b-[1px] border-slate-200'>
@@ -49,9 +51,9 @@ const AgentPage = () => {
                   </div>
               </div>
 
-              <div className='w-full  flex justify-between mt-[5vh]'>
+              <div className='w-full  flex justify-between mt-[5vh]  py-[2vh]'>
 
-                <div className='scrollable-div flex justify-around gap-7 flex-wrap overflow-y-auto   w-[69%] max-h-[100vh] '>
+                <div className='scrollable-div flex justify-around gap-7 flex-wrap overflow-y-auto  w-[69%] max-h-[100vh] '>
                 <DivExploreProperty/>
                 <DivExploreProperty/>
                 <DivExploreProperty/>
@@ -62,7 +64,7 @@ const AgentPage = () => {
                 <DivExploreProperty/>
                 <DivExploreProperty/>
                 </div>
-                <div className='w-[29%] flex h-[100vh] flex-col bg-blue-200'>
+                <div className='w-[29%] flex h-[100vh] rounded-[5px] border-[1px] border-gray-400  flex-col bg-slate-100'>
 
                   <div className='w-[100%] mt-[10px]'>
                     <h3 className='ml-[10px] text-[16px] font-[700]'>Details</h3>
@@ -85,7 +87,7 @@ const AgentPage = () => {
 
                     <div className='flex text-[16px] font-[700] w-[90%] mx-auto items-center justify-between h-[6vh] border-b-[1px] border-gray-400 '>
                       <div className='flex items-center gap-[10px]'><span className='text-green-500'><BsFillClockFill /></span> <span className='text-slate-500'>Last Seen</span></div>
-                   
+                      <div>Today</div>
                     </div>
 
                   </div>
@@ -94,31 +96,50 @@ const AgentPage = () => {
                     <h3 className='ml-[10px] text-[16px] font-[700] mt-[10px] mb-[5px]'>Property Type</h3>
                     <div className='scrollable-div overflow-y-auto max-h-[25vh]'>
                     <div className='flex text-[16px] font-[700] w-[90%] mx-auto items-center justify-between h-[6vh] border-b-[1px] border-gray-400 '>
-                      <div className='flex items-center gap-[10px]'><span className='text-indigo-900'><IoChatbubbles /></span> <span className='text-slate-500'>Bungalow</span></div>
+                      <div className='flex items-center gap-[10px]'><span className='text-gray-800'><FaHouseUser /></span> <span className='text-slate-500'>Bungalow</span></div>
                       <div>Available</div>
                     </div>
 
                     <div className='flex text-[16px] font-[700] w-[90%] mx-auto items-center justify-between h-[6vh] border-b-[1px] border-gray-400 '>
-                      <div className='flex items-center gap-[10px]'><span className='text-indigo-900'><IoChatbubbles /></span> <span className='text-slate-500'>Two bedroom flat</span></div>
+                      <div className='flex items-center gap-[10px]'><span className='text-gray-800'><FaHouseUser /></span> <span className='text-slate-500'>Two bedroom flat</span></div>
                       <div>Available</div>
                     </div>
                     <div className='flex text-[16px] font-[700] w-[90%] mx-auto items-center justify-between h-[6vh] border-b-[1px] border-gray-400 '>
-                      <div className='flex items-center gap-[10px]'><span className='text-indigo-900'><IoChatbubbles /></span> <span className='text-slate-500'>Three bedroom flatt</span></div>
-                      <div>Available</div>
-                    </div>
-
-                    <div className='flex text-[16px] font-[700] w-[90%] mx-auto items-center justify-between h-[6vh] border-b-[1px] border-gray-400 '>
-                      <div className='flex items-center gap-[10px]'><span className='text-indigo-900'><IoChatbubbles /></span> <span className='text-slate-500'>Studio Apartment</span></div>
+                      <div className='flex items-center gap-[10px]'><span className='text-gray-800'><FaHouseUser /></span> <span className='text-slate-500'>Three bedroom flatt</span></div>
                       <div>Available</div>
                     </div>
 
                     <div className='flex text-[16px] font-[700] w-[90%] mx-auto items-center justify-between h-[6vh] border-b-[1px] border-gray-400 '>
-                      <div className='flex items-center gap-[10px]'><span className='text-indigo-900'><IoChatbubbles /></span> <span className='text-slate-500'>Warehouse</span></div>
+                      <div className='flex items-center gap-[10px]'><span className='text-gray-800'><FaHouseUser /></span> <span className='text-slate-500'>Studio Apartment</span></div>
+                      <div>Available</div>
+                    </div>
+
+                    <div className='flex text-[16px] font-[700] w-[90%] mx-auto items-center justify-between h-[6vh] border-b-[1px] border-gray-400 '>
+                      <div className='flex items-center gap-[10px]'><span className='text-gray-800'><FaHouseUser /></span> <span className='text-slate-500'>Warehouse</span></div>
                       <div>Available</div>
                     </div>
                     </div>
                   </div>
-               
+
+                  <div className='  mt-[5vh] border-t-[1px] border-gray-400  h-[30vh]  relative'>
+                  
+                  <div className='absolute h-[100%] w-[100%] z-0 text-[150px] opacity-10 flex justify-center items-center'><FaLocationDot /></div>
+                  <div className='relative z-10'>
+                  <h3 className='ml-[10px] text-[16px] font-[700] mt-[10px] mb-[5px]'>Locations Covered</h3>
+                  <div className='scrollable-div overflow-y-auto max-h-[25vh]'>
+                    {["Akobo", "Akala", "Bodiga", "Challenge", "Dugbe"].map((location) => (
+                      <div key={location} className='flex text-[16px] font-[700] w-[90%] mx-auto items-center justify-between h-[6vh] border-b-[1px] border-gray-400 '>
+                        <div className='flex items-center gap-[10px]'>
+                          <span className='text-blue-700'><FaLocationDot /></span> 
+                          <span className='text-slate-500'>{location}</span>
+                        </div>
+                        <div>Covered</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                  </div>
              
                 </div>
 
