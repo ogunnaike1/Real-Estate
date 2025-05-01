@@ -33,7 +33,7 @@ const App= ()=> {
   }
     <Routes>
     <Route path="/"element= {<LandingPageCarousel/>} />
-
+    <Route path="/agent" element={<AgentPage />} />
   </Routes>
   <Footer/>
   </div>
