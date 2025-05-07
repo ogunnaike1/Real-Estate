@@ -32,8 +32,7 @@ const App= ()=> {
       </div>
   }
     <Routes>
-    <Route path="/"element= {<LandingPageCarousel/>} />
-    <Route path="/agent" element={<AgentPage />} />
+    <Route path="/"element= {<LandingPageCarousel/>} 
   </Routes>
   <Footer/>
   </div>
