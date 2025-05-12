@@ -22,7 +22,7 @@ export default function App() {
         className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:shadow-lg"
       >
         Rent Now
-   
+      </motion.button>
     </div>
   );
 }
