@@ -8,6 +8,9 @@ import Navbar from './component/Navbar';
 import AgentPage from './component/AgentPage';
 import Hover from './component/Hover';
 import Footer from './component/Footer';
+import SeeMore from './component/SeeMore';
+import Accordion from './component/Accordion';
+import AnimatedForm from './component/AnimationForm';
 
 
 const App= ()=> {
@@ -34,6 +37,9 @@ const App= ()=> {
     <Routes>
     <Route path="/"element= {<LandingPageCarousel/>} />
     <Route path="/agent" element={<AgentPage />} />
+    <Route path="/seemore" element={<SeeMore />} />
+    <Route path="/accord" element={<Accordion/>} />
+    <Route path="/animation" element={<AnimatedForm/>} />
   </Routes>
   <Footer/>
   </div>
