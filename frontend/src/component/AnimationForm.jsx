@@ -49,8 +49,7 @@ const QuickSearch = () => {
             className="p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option>Price Range</option>
-            <option>$500 - $1000</option>
-            <option>$1000 - $1500</option>
+      
             <option>$1500+</option>
           </motion.select>
 
