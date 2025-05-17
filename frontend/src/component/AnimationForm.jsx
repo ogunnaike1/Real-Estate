@@ -5,27 +5,91 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 
-export default function App() {
+
+const QuickSearch = () => {
+  const fadeUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-300">
-      <motion.button
-        whileHover={{
-          scale: [1, 1.1, 1.05], // bounce-like effect
-          transition: {
-            type: "spring",
-            stiffness: 300,
-            damping: 15,
-          },
-        }}
-        whileTap={{ scale: 0.95 }} // tap feedback
-        onClick={() => alert("Clicked!")}
-        className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:shadow-lg"
+    <section className="w-full bg-gray-50 py-12 px-6 md:px-16">
+      <motion.div
+        className="max-w-6xl mx-auto"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        variants={fadeUp}
       >
-        Rent Now
-      </motion.button>
-    </div>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
+          Quick Search
+        </h2>
+
+        <div className="grid md:grid-cols-4 gap-4">
+          <motion.input
+            whileFocus={{ scale: 1.03 }}
+            type="text"
+            placeholder="Location"
+            className="p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary"
+          />
+
+          <motion.select
+            whileFocus={{ scale: 1.03 }}
+            className="p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary"
+          >
+            <option>Property Type</option>
+            <option>Apartment</option>
+            <option>House</option>
+            <option>Studio</option>
+          </motion.select>
+
+          <motion.select
+            whileFocus={{ scale: 1.03 }}
+            className="p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary"
+          >
+            <option>Price Range</option>
+            <option>$500 - $1000</option>
+            <option>$1000 - $1500</option>
+        
+          </motion.select>
+
+          <motion.div whileHover={{ scale: 1.05 }}>
+            <button className="w-full h-full rounded-xl text-white bg-primary hover:bg-primary-dark transition">
+              Search
+            </button>
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
   );
-}
+};
+
+export default QuickSearch;
+
+
+
+// export default function App() {
+//   return (
+//     <div className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-300">
+//       <motion.button
+//         whileHover={{
+//           scale: [1, 1.1, 1.05], // bounce-like effect
+//           transition: {
+//             type: "spring",
+//             stiffness: 300,
+//             damping: 15,
+//           },
+//         }}
+//         whileTap={{ scale: 0.95 }} // tap feedback
+//         onClick={() => alert("Clicked!")}
+//         className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:shadow-lg"
+//       >
+//         Rent Now
+//       </motion.button>
+//     </div>
+//   );
+// }
 
 
 // const DoubleDoorLoader = () => {
