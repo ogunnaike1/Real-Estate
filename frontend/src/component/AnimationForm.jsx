@@ -51,7 +51,7 @@ const QuickSearch = () => {
             <option>Price Range</option>
             <option>$500 - $1000</option>
             <option>$1000 - $1500</option>
-         
+            <option>$1500+</option>
           </motion.select>
 
           <motion.div whileHover={{ scale: 1.05 }}>
