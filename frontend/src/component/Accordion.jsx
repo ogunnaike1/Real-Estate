@@ -62,7 +62,9 @@ const Accordion = () => {
       {faqData.map((faq, index) => (
         <AccordionItem
           key={index}
-     
+          faq={faq}
+          isOpen={openIndex === index}
+          onClick={() => toggle(index)}
         />
       ))}
     </div>
