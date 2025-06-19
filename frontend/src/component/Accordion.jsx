@@ -63,7 +63,8 @@ const Accordion = () => {
         <AccordionItem
           key={index}
           faq={faq}
-       
+          isOpen={openIndex === index}
+          onClick={() => toggle(index)}
         />
       ))}
     </div>
